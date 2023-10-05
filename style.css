@@ -1,0 +1,142 @@
+.header{
+    /* background: linear-gradient(52deg, rgba(51,190,103,1) 1%, rgba(17,153,142,1) 100%)  center center; */
+    background: url(images/circle-bg-1.svg) center center;
+    background-size: cover;
+    height: 95vh;
+}
+
+
+.col-md-4{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile{
+    width: 400px;
+    height: 390px;
+}
+
+
+@media screen and (max-width:1204px) {
+    .proo::after{
+        width: 0;
+    }
+    .proo::before{
+        width: 0;
+    }
+    .profile{
+        width: 280px;
+        height: 280px;
+    }
+    .my-svg{
+        left:-15vw;
+    }
+    .my-svg text {
+        animation: stroke 5s backwards;
+        stroke-width: 3;
+        stroke: #008468;
+        fill: #008468;
+        font-size: 40px;
+    }
+
+}
+
+.header{
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+}
+
+
+/* about me */
+
+.about-me{
+    background: url(images/aboutmeBg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: contain;
+}
+
+.glass{
+background:rgba(2, 75, 60,.3);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur(.7px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+}
+
+
+.glass-pic img{
+    margin: 50px 2px;
+}
+
+.about-me-glass-pic{
+    position: relative;
+}
+
+
+
+img[class*="mini"] {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+
+.mini-pic-1{
+    top: 10px;
+    right: -20px;
+    border: 1px solid red;
+    animation: mini-pic-1 5.5s ease-in-out alternate-reverse infinite ;
+}
+.mini-pic-2{
+    width: 130px !important;
+    height: 130px !important;
+    top:30%;
+    left: -7%;
+    border:3px solid #008468;
+    animation: mini-pic-2 6.5s ease-in-out alternate-reverse infinite ;
+
+
+}
+
+.mini-pic-3{
+    bottom:10px;
+    left:80%;
+    border: 2px solid green;
+    animation: mini-pic-3 5.5s ease-in-out alternate-reverse infinite ;
+
+
+}
+
+@keyframes mini-pic-1 {
+    0%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes mini-pic-2 {
+    0%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes mini-pic-3 {
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+/* end about me */
