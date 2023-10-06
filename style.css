@@ -1,5 +1,4 @@
 .header{
-    /* background: linear-gradient(52deg, rgba(51,190,103,1) 1%, rgba(17,153,142,1) 100%)  center center; */
     background: url(images/circle-bg-1.svg) center center;
     background-size: cover;
     height: 95vh;
@@ -55,8 +54,12 @@
     background: url(images/aboutmeBg.svg);
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 120vh;
     background-size: contain;
+}
+.about-me h1{
+    letter-spacing: .5rem;
+
 }
 
 .glass{
@@ -65,6 +68,7 @@ box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur(.7px );
 -webkit-backdrop-filter: blur( 8.5px );
 border-radius: 10px;
+max-height: auto;
 }
 
 
@@ -74,6 +78,11 @@ border-radius: 10px;
 
 .about-me-glass-pic{
     position: relative;
+}
+
+.main-image-about-me{
+    max-height: 500px;
+    max-width: 100%;
 }
 
 
@@ -140,3 +149,180 @@ img[class*="mini"] {
     }
 }
 /* end about me */
+
+/* Skills */
+.skills{
+    height:160vh;
+    margin-top: 2rem;
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+    background: url(images/skills-Bg.svg) , #001220;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    position: relative;
+}
+
+.skills::after{
+    content: '';
+    width: 100%;
+    height: 200px;
+    background: #ffffff;
+    clip-path: polygon(0 35%, 100% 66%, 100% 100%, 0% 100%);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.title{
+    padding: 10rem;
+    letter-spacing: .5rem;
+}
+.skill-card{
+    width: 340px;
+    height: 100px;
+    box-shadow:  5px 5px 1px #3d3636,
+   7px 7px 1px #973c3c,
+    10px 10px 1px #0c8676
+    ,11px 11px 1px #7634e0;
+    transition: all .4s ease-out;
+
+}
+.skill-card:hover{
+    transform: translateY(-5px);
+
+
+}
+.skill-icons{
+    width: 50px;
+    height: 50px;
+}
+
+.git-text{
+    font-size: 54px !important;
+}
+
+/* End of Skills */
+
+/* Projects */
+.projects{
+    background: url(images/bg-project11.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 120vh;
+    background-size: cover;
+}
+
+.project-title{
+    padding: 5rem;
+    letter-spacing: .5rem;
+}
+
+.left-side-project{
+    border-left: 5px solid #001220;
+    padding: 0 70px !important;
+}
+.right-side-project{
+    border-right: 5px solid #001220;
+    padding: 0 70px !important;
+}
+
+.project-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.project-icon img{
+    width: calc(100% - 10px);
+    height: calc(100% - 5px);
+}
+
+.card-project{
+    position: relative;
+    box-shadow: 3px 3px 1px rgb(59, 53, 53);
+}
+
+.card-project::before{
+    content: '';
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #008468;
+    border: 3px solid #001220;
+    position: absolute;
+    top:106px;
+    left: -80px;
+    z-index: 1;
+}
+
+
+.card-project::after{
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(52deg, rgba(51,190,103,1) 1%, rgba(17,153,142,1) 100%);
+    border: 1px solid #001220;
+    position: absolute;
+    top:111px;
+    left:-73px;
+    z-index: -1;
+}
+
+
+.card-project-right{
+    position: relative;
+    box-shadow: 3px 3px 1px rgb(59, 53, 53);
+}
+
+.card-project-right::before{
+    content: '';
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #008468;
+    border: 3px solid #001220;
+    position: absolute;
+    top:106px;
+    right: -80px;
+    z-index: 1;
+}
+
+
+.card-project-right::after{
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(52deg, rgb(26, 112, 57) 1%, rgb(0, 196, 179) 100%);
+    border: 1px solid #001220;
+
+    position: absolute;
+    top:111px;
+    right:-73px;
+    z-index: -1;
+}
+
+.github-link{
+    width:60px ;
+    height: 60px;
+    top: 45%;
+    z-index: 100;
+    border: 2px solid black;
+    opacity: .95;
+    box-shadow: 3px 3px 2px #000;
+}
+
+
+
+.github-link:hover{
+    opacity: 1;
+    box-shadow: 2.6px 2.6px 2px #000;
+}
+
+.accordion-test{
+    width: 100% !important;
+}
+
+.accordion-kamel{
+    width: 120px !important;
+}
+
+/* End of Projects */
