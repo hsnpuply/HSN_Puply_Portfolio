@@ -208,7 +208,7 @@ img[class*="mini"] {
     background: url(images/bg-project11.svg);
     background-position: center center;
     background-repeat: no-repeat;
-    height: 120vh;
+    height: 200vh;
     background-size: cover;
 }
 
@@ -326,3 +326,50 @@ img[class*="mini"] {
 }
 
 /* End of Projects */
+
+
+/* Contact me */
+.contact-me{
+    height:120vh;
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+    background: url(images/skills-Bg.svg) , #001220;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.social-media-title{
+    position: relative;
+    letter-spacing: .3rem;
+
+}
+
+.social-media-title::after{
+    content: '';
+    position: absolute;
+    width:40%;
+    height: 8px;
+    background: linear-gradient(180deg, rgba(12,134,118,1) 1%, rgba(0,0,0,1) 100%);
+    top: 50%;
+    right:-52%;
+}
+
+.social-media-title::before{
+    content: '';
+    position: absolute;
+    width:40%;
+    height: 8px;
+    background: linear-gradient(180deg, rgba(12,134,118,1) 1%, rgba(0,0,0,1) 100%);
+    top: 50%;
+    left:-52%;
+}
+
+.contact-social-media-icons{
+
+}
+.contact-social-media-icons img{
+    width: 140px;
+}
+
+/* End of Contact me */
+
