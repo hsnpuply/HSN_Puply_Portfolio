@@ -330,7 +330,7 @@ img[class*="mini"] {
 
 /* Contact me */
 .contact-me{
-    height:120vh;
+    height:180vh;
     clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
     background: url(images/skills-Bg.svg) , #001220;
     background-repeat: no-repeat;
@@ -363,13 +363,52 @@ img[class*="mini"] {
     top: 50%;
     left:-52%;
 }
-
-.contact-social-media-icons{
-
-}
 .contact-social-media-icons img{
     width: 140px;
 }
+
+.contact-social-media-icons-img{
+    transition: all .8s ease;
+}
+
+.contact-social-media-icons-img:hover{
+    transform: translateY(-20px) ;
+}
+
+.connections-container{
+    margin: 100px 0;
+}
+
+.contact-social-media-icons,.connections-container{
+    gap: 4rem;
+}
+
+.textarea-message{
+    background-color: rgba(255, 255, 255,.9) !important;
+}
+
+.textarea-message:focus{
+    background-color: #fff !important;
+}
+
+.input-form{
+    background-color: rgba(255, 255, 255,.9) !important;
+}
+
+.input-form:focus{
+    background-color: #fff !important;
+}
+
+.form-legend{
+    letter-spacing: .2rem;
+    word-spacing: .1rem;
+}
+
+input[type='submit']{
+    letter-spacing: .3rem;
+}
+
+
 
 /* End of Contact me */
 
