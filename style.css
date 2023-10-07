@@ -408,7 +408,24 @@ input[type='submit']{
     letter-spacing: .3rem;
 }
 
-
-
 /* End of Contact me */
 
+/* footer */
+.footer{
+    background:#001220;
+    background: #08423b;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20vh;
+    background-size: cover;
+}
+
+.bootstrap-icon-footer img{
+    width: 35px;
+    height: 35px;
+}
+
+.footer-text{
+    border: 5px solid #08423b;
+}
+/* End of footer */
