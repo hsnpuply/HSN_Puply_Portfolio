@@ -332,9 +332,9 @@ img[class*="mini"] {
 .contact-me{
     height:180vh;
     clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
-    background: url(images/skills-Bg.svg) , #001220;
+    background: url(images/circle-bg-1.svg) , #001220;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: top right;
     background-size: cover;
 }
 
@@ -412,11 +412,11 @@ input[type='submit']{
 
 /* footer */
 .footer{
-    background:#001220;
-    background: #08423b;
-    background-position: center center;
+    width: 100%;
+    background: url(images/footer-background.svg);
+    background-position: center;
     background-repeat: no-repeat;
-    height: 20vh;
+    height: 40vh;
     background-size: cover;
 }
 
@@ -427,5 +427,8 @@ input[type='submit']{
 
 .footer-text{
     border: 5px solid #08423b;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    padding: 3rem 200px;
 }
 /* End of footer */
