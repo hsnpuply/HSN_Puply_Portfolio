@@ -1,3 +1,27 @@
+/* General */
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Young+Serif&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Young+Serif&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+  body{
+    /* font-family: 'Dancing Script', cursive  !important; */
+    font-family: 'Young Serif', serif !important;
+    /* font-family: 'Josefin Sans' , sans-serif !important; */
+  }
+
+  .title{
+    font-family: 'Dancing Script', cursive  !important;
+  }
+
+  .social-badge{
+    font-family: 'Bree Serif', serif;
+  }
+
+/* /General */
+
 .header{
     background: url(images/circle-bg-1.svg) center center;
     background-size: cover;
@@ -330,12 +354,17 @@ img[class*="mini"] {
 
 /* Contact me */
 .contact-me{
-    height:180vh;
+    min-height:180vh;
     clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
     background: url(images/circle-bg-1.svg) , #001220;
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
+}
+.contact-title{
+    padding-top: 250px !important;
+    text-align: center;
+    word-break: keep-all;
 }
 
 .social-media-title{
@@ -363,8 +392,9 @@ img[class*="mini"] {
     top: 50%;
     left:-52%;
 }
-.contact-social-media-icons img{
+.contact-social-media-icons img,.connections-container a img{
     width: 140px;
+    height: 140px;
 }
 
 .contact-social-media-icons-img{
@@ -412,23 +442,80 @@ input[type='submit']{
 
 /* footer */
 .footer{
-    width: 100%;
     background: url(images/footer-background.svg);
     background-position: center;
     background-repeat: no-repeat;
     height: 40vh;
     background-size: cover;
+    position: relative;
+}
+.footer::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 22.5%);
+    width: 45%;
+    height: 10px;
+    background: linear-gradient(287deg, rgba(0,18,32,1) 1%, rgba(0,132,104,1) 60%, rgba(0,18,32,1) 100%);
+    box-shadow: 3px 3px 19px #008468;
+    border-radius: 5px;
 }
 
 .bootstrap-icon-footer img{
-    width: 35px;
-    height: 35px;
+    height: 30px;
 }
 
-.footer-text{
-    border: 5px solid #08423b;
-    background-color: transparent;
+.developer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    word-spacing: .2rem;
     backdrop-filter: blur(2px);
-    padding: 3rem 200px;
+    padding: 50px;
+    /* box-shadow: 3px 3px 12px #000; */
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+    border: none;
+    animation: developer 2.4s .2s infinite alternate-reverse;
 }
+.developer:hover{
+    box-shadow: -1px -1px 12px #000;
+}
+
+.copyright{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 40px;
+    word-spacing: .2rem;
+    background-color: transparent;
+
+}
+.hasan_puply-{
+    background-color: #001220;
+    color: #fff;
+    letter-spacing: .23rem;
+    box-shadow: 3px 3px 10px #000;
+    text-shadow: 2px 2px 14px #008468;
+}
+
+.hasan_puply-:hover{
+    box-shadow: 2px 2px 10px #000;
+    text-shadow: 2px 2px 20px #008468;
+
+}
+
+@keyframes developer {
+    0%{
+        box-shadow: 3px 3px 12px #000;
+
+    }
+
+    100%{
+        box-shadow: -1px -1px 12px #000;
+    }
+}
+
 /* End of footer */
