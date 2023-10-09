@@ -232,7 +232,7 @@ img[class*="mini"] {
     background: url(images/bg-project11.svg);
     background-position: center center;
     background-repeat: no-repeat;
-    height: 200vh;
+    min-height: 200vh;
     background-size: cover;
 }
 
@@ -251,8 +251,28 @@ img[class*="mini"] {
 }
 
 .project-icon{
-    width: 40px;
-    height: 40px;
+    width: 47px;
+    height: 47px;
+    filter: drop-shadow(1px 1px 3px #000);
+    padding: 2px !important;
+}
+
+.html-icon{
+    background-color: #f7d53d	 !important;
+
+}
+.css-icon{
+    background-color: #222e50 !important;
+
+}
+.js-icon{
+    background-color: #12674a !important;
+
+
+}
+.sass-icon{
+    background-color: #F5C0C9 !important;
+
 }
 
 .project-icon img{
@@ -262,7 +282,19 @@ img[class*="mini"] {
 
 .card-project{
     position: relative;
-    box-shadow: 3px 3px 1px rgb(59, 53, 53);
+    box-shadow: 3px 3px 15px rgb(29, 28, 28);
+    transition: all .2s ease-in-out;
+}
+
+.card-project:nth-child(odd){
+    background: linear-gradient(27deg, #0c8676 1%, #008468 18%, #008468 85%, #0c8676 100%) !important;
+}
+.card-project:nth-child(even){
+    background: #089986  !important;
+}
+.card-project:hover{
+    box-shadow: 4px 4px 20px rgb(12, 12, 12);
+
 }
 
 .card-project::before{
@@ -294,7 +326,28 @@ img[class*="mini"] {
 
 .card-project-right{
     position: relative;
-    box-shadow: 3px 3px 1px rgb(59, 53, 53);
+    box-shadow: -3px 3px 15px rgb(29, 28, 28);
+    transition: all .2s ease-in-out;
+    background: #089986  !important;
+}
+
+.card-project-right:hover{
+    box-shadow: -4px -4px 20px rgb(12, 12, 12);
+}
+
+.card-project-right{
+    background: #008473;
+    color: #000;
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-project-right:nth-child(even){
+    background: linear-gradient(27deg, #0c8676 1%, #008468 18%, #008468 85%, #0c8676 100%) !important;
+}
+.card-project-right:nth-child(odd){
+    background: #089986  !important;
 }
 
 .card-project-right::before{
@@ -332,6 +385,7 @@ img[class*="mini"] {
     border: 2px solid black;
     opacity: .95;
     box-shadow: 3px 3px 2px #000;
+    transition: all .4s ease-in-out;
 }
 
 
@@ -339,6 +393,7 @@ img[class*="mini"] {
 .github-link:hover{
     opacity: 1;
     box-shadow: 2.6px 2.6px 2px #000;
+    transform: translateY(-6px);
 }
 
 .accordion-test{
