@@ -250,6 +250,14 @@ img[class*="mini"] {
     padding: 0 70px !important;
 }
 
+.project-pic-a{
+    transition: all .5s ease-in-out;
+}
+
+.project-pic-a:hover{
+    transform: scale(1.02);
+}
+
 .project-icon{
     width: 47px;
     height: 47px;
@@ -280,6 +288,10 @@ img[class*="mini"] {
     height: calc(100% - 5px);
 }
 
+.title-project{
+    text-shadow: 1px 1px 12px #ddd8d8;
+}
+
 .card-project{
     position: relative;
     box-shadow: 3px 3px 15px rgb(29, 28, 28);
@@ -287,11 +299,17 @@ img[class*="mini"] {
 }
 
 .card-project:nth-child(odd){
-    background: linear-gradient(27deg, #0c8676 1%, #008468 18%, #008468 85%, #0c8676 100%) !important;
+    /* background: linear-gradient(27deg, #0c8676 1%, #008468 18%, #008468 85%, #0c8676 100%) !important; */
+    background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(8,153,134,1) 100%, rgba(255,255,255,1) 100%) !important;
+
 }
 .card-project:nth-child(even){
-    background: #089986  !important;
+    /* background: #089986  !important; */
+    background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgb(41, 153, 97) 100%, rgba(255,255,255,1) 100%) !important;
+
+
 }
+
 .card-project:hover{
     box-shadow: 4px 4px 20px rgb(12, 12, 12);
 
@@ -344,10 +362,10 @@ img[class*="mini"] {
 }
 
 .card-project-right:nth-child(even){
-    background: linear-gradient(27deg, #0c8676 1%, #008468 18%, #008468 85%, #0c8676 100%) !important;
+    background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgba(8,153,134,1) 100%, rgba(255,255,255,1) 100%) !important;
 }
 .card-project-right:nth-child(odd){
-    background: #089986  !important;
+    background: radial-gradient(circle, rgba(255,255,255,1) 1%, rgb(41, 153, 97) 100%, rgba(255,255,255,1) 100%) !important;
 }
 
 .card-project-right::before{
