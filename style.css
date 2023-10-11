@@ -127,7 +127,6 @@ img[class*="mini"] {
     height: 130px;
     border-radius: 50%;
     position: absolute;
-
 }
 
 
@@ -605,7 +604,6 @@ input[type='submit']{
 @keyframes developer {
     0%{
         box-shadow: 3px 3px 12px #000;
-
     }
 
     100%{
@@ -614,3 +612,37 @@ input[type='submit']{
 }
 
 /* End of footer */
+
+
+
+/* top scroll */
+.to-the-top{
+    background-color: #008468;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    position: fixed;
+    top: 88%;
+    right: 4%;
+    z-index: 1000;
+    transition: all .2s ease-in-out;
+    border: 2px solid #000;
+}
+
+.to-the-top:hover{
+    background-color: #000;
+    color: #008468;
+    border: 2px solid #008468;
+
+}
+
+
+.to-the-top-icon{
+    display: none;
+    font-size: 42px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+/* end scroll */
