@@ -78,12 +78,18 @@
     background: url(images/aboutmeBg.svg);
     background-position: center;
     background-repeat: no-repeat;
-    height: 120vh;
+    min-height: 120vh;
     background-size: contain;
 }
 .about-me h1{
     letter-spacing: .5rem;
+    margin: 0 !important;
+    padding: 20px 0 40px !important;
 
+}
+
+.text-looking-Job{
+    margin-top: 15px !important;
 }
 
 .glass{
@@ -105,10 +111,15 @@ max-height: auto;
 }
 
 .main-image-about-me{
-    max-height: 500px;
-    max-width: 100%;
+    min-height: 700px;
+    box-shadow: 2px 2px 15px #000;
+    border: 2px solid #535252;
+    filter: grayscale(.3);
+    transition: all .5s ease-in-out;
 }
-
+.main-image-about-me:hover{
+    filter: grayscale(0);
+}
 
 
 img[class*="mini"] {
@@ -121,26 +132,25 @@ img[class*="mini"] {
 
 
 .mini-pic-1{
+    width: auto !important;
     top: 10px;
     right: -20px;
-    border: 1px solid red;
     animation: mini-pic-1 5.5s ease-in-out alternate-reverse infinite ;
 }
 .mini-pic-2{
-    width: 130px !important;
-    height: 130px !important;
+    width: 190px !important;
+    height: 190px !important;
     top:30%;
     left: -7%;
-    border:3px solid #008468;
     animation: mini-pic-2 6.5s ease-in-out alternate-reverse infinite ;
 
 
 }
 
 .mini-pic-3{
+    width: auto !important;
     bottom:10px;
     left:80%;
-    border: 2px solid green;
     animation: mini-pic-3 5.5s ease-in-out alternate-reverse infinite ;
 
 
@@ -176,7 +186,7 @@ img[class*="mini"] {
 
 /* Skills */
 .skills{
-    height:160vh;
+    min-height:160vh;
     margin-top: 2rem;
     clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
     background: url(images/skills-Bg.svg) , #001220;
@@ -197,14 +207,21 @@ img[class*="mini"] {
     left: 0;
 }
 
+.skills-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .title{
     padding: 10rem;
     letter-spacing: .5rem;
 }
 .skill-card{
-    width: 340px;
-    height: 100px;
-    box-shadow:  5px 5px 1px #3d3636,
+    width: 300px;
+    height: 80px;
+    box-shadow:  5px 5px 1px #353333,
    7px 7px 1px #973c3c,
     10px 10px 1px #0c8676
     ,11px 11px 1px #7634e0;
@@ -219,6 +236,7 @@ img[class*="mini"] {
 .skill-icons{
     width: 50px;
     height: 50px;
+    margin-right:  20px !important;
 }
 
 .git-text{
@@ -271,6 +289,10 @@ img[class*="mini"] {
 }
 .css-icon{
     background-color: #222e50 !important;
+}
+
+.git-icon{
+    background-color: #17a5b8 !important;
 
 }
 .js-icon{
