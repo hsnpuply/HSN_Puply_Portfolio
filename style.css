@@ -1,23 +1,23 @@
 /* General */
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Young+Serif&display=swap');
-
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Young+Serif&display=swap');
-
-  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Cinzel&family=Lilita+One&family=Russo+One&family=Tilt+Neon&display=swap');
+@font-face {
+    font-family: 'b-nazanin';
+    src: url(fonts/B-NAZANIN.TTF);
+}
 
   body{
-    /* font-family: 'Dancing Script', cursive  !important; */
-    font-family: 'Young Serif', serif !important;
-    /* font-family: 'Josefin Sans' , sans-serif !important; */
+    font-family: 'Cinzel', serif;
+    font-family: 'Lilita One', sans-serif;
+    font-family: 'Russo One', sans-serif;
+    font-family: 'Tilt Neon', sans-serif !important;
   }
 
   .title{
-    font-family: 'Dancing Script', cursive  !important;
+    font-family: 'Lilita One', sans-serif  !important;
   }
 
   .social-badge{
-    font-family: 'Bree Serif', serif;
+    font-family: 'Russo One', sans-serif !important;
   }
 
 /* /General */
@@ -27,7 +27,13 @@
     background-size: cover;
     height: 95vh;
 }
+.persian-header,.header{
+    font-family: 'Tilt Neon', sans-serif !important;
 
+}
+.persian-header:not(.puply-in-persian){
+    font-family:'b-nazanin';
+}
 
 .col-md-4{
 
@@ -85,6 +91,10 @@
     letter-spacing: .5rem;
     margin: 0 !important;
     padding: 20px 0 40px !important;
+}
+
+.biography{
+
 
 }
 
@@ -566,12 +576,12 @@ input[type='submit']{
     transform: translate(-50%, -50%);
     word-spacing: .2rem;
     backdrop-filter: blur(2px);
-    padding: 50px;
-    /* box-shadow: 3px 3px 12px #000; */
+    padding: 2.4rem;
     border-radius: 10px;
     transition: all .25s ease-in-out;
     border: none;
     animation: developer 2.4s .2s infinite alternate-reverse;
+    text-shadow: 2px 2px 5px #000;
 }
 .developer:hover{
     box-shadow: -1px -1px 12px #000;
@@ -585,6 +595,8 @@ input[type='submit']{
     line-height: 40px;
     word-spacing: .2rem;
     background-color: transparent;
+    font-weight: bold;
+    text-shadow: 2px 2px 13px #424141;
 
 }
 .hasan_puply-{
@@ -627,6 +639,7 @@ input[type='submit']{
     z-index: 1000;
     transition: all .2s ease-in-out;
     border: 2px solid #000;
+    cursor: pointer;
 }
 
 .to-the-top:hover{
