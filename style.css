@@ -666,74 +666,92 @@ input[type='submit']{
 .menu-bar{
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-}
-ul{
-    list-style: none;
+    z-index: 10000;
     padding: 0;
     margin: 0;
     position: fixed;
     right: 0;
-    top: 10%;
-    z-index: 10000;
+    top: 25%;
 }
-li{
-    width: 100%;
+.menu-bar a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid #000;
-}
-
-li:first-child{
-    border-top-left-radius: 10%;
-}
-li:last-child{
-    border-bottom-left-radius: 10%;
-
-}
-ul li:hover{
-    background-color: #222e50;
-}
-li a{
-    font-size: 1.3rem;
+    width: 120px;
+    height: 60px;
     text-decoration: none;
     color: #000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    width: 100px;
-    height: 80px;
+    font-size: 1.13rem;
+    transition: transform .5s ease-in-out;
+    padding-left: 10px;
+    transform: translateX(30px);
+}
 
+.menu-bar .menu-home a{
+    border-top-left-radius: 10%;
 }
-li a i{
-    font-size: 25px;
+.menu-bar .menu-contact a{
+    border-bottom-left-radius: 10%;
 }
-ul li:hover a{
+
+.menu-bar a:hover{
     color: #fff;
+    transform: translateX(0);
+    background-color: #001220 !important;
+    border-radius: 6%;
 }
-/* ul li a:hover span{
+
+.menubar-a-hover{
+    color: #fff !important;
+    transform: translateX(0px) !important;
+    background-color: #001220 !important;
+    border-radius: 6%;
+}
+
+.menu-bar a i{
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.menu-bar a:hover span{
     display: block;
-    visibility: visible;
-} */
-
-ul li a span{
-    display: none;
-    visibility: hidden;
-
+    transition: all .4s ease-in-out;
 }
 
-li:nth-child(1){
+
+
+.menu-bar a span{
+    display: none;
+    transition: all .4s ease-in-out;
+}
+.menu-bar-a-span{
+    display: block;
+    transition: all .4s ease-in-out;
+}
+/*
+.menu-bar  .menu-home a{
     background-color: #008468;
 }
-li:nth-child(2){
+.menu-bar  .menu-about a{
     background-color: rgb(136, 190, 55);
 }
-li:nth-child(3){
+.menu-bar  .menu-skills  a{
     background-color: gold;
 }
-li:nth-child(4){
+.menu-bar .menu-projects  a{
     background-color: rgb(243, 104, 54);
 }
-li:nth-child(5){
+.menu-bar .menu-contact  a{
     background-color: rgb(223, 53, 53);
+} */
+
+.menu-bar .menu:nth-child(odd) a {
+    background-color: #008468;
+}
+.menu-bar .menu:nth-child(even) a{
+    background-color: #fcfcfc;
 }
 /* End of menubar */
