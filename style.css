@@ -727,8 +727,13 @@ input[type='submit']{
     display: none;
     transition: all .4s ease-in-out;
 }
+
 .menu-bar-a-span{
-    display: block;
+    display: block !important;
+    transition: all .4s ease-in-out;
+}
+.menu-bar-a-span-off{
+    display: none ;
     transition: all .4s ease-in-out;
 }
 /*

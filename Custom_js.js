@@ -1,6 +1,10 @@
 const mybutton = document.querySelector('.to-the-top-icon');
 const menu = document.querySelectorAll('.menu a');
-const menuSpan = document.querySelector('.menu a span');
+// const menuSpan = document.querySelector('.menu_a_link span');
+const spans = document.querySelectorAll('.menu-bar a span');
+// const menuSpan=document.querySelectorAll('menu_span');
+
+const sections = document.querySelectorAll('.sections');
 
 const headerSection = document.querySelector('.header');
 const Offset_headerSection = headerSection.offsetTop;
@@ -42,29 +46,51 @@ window.addEventListener('scroll',()=>{
   skills_scrolling();
   about_me_scrolling();
   contact_me_scrolling();
+
+  // scrollBehaviorOnSideMenubar();
+
 })
 
+
+const scrollBehaviorOnSideMenubar=()=>{
+  sections.forEach((bakhsh,shomarande)=>{
+    if(window.scrollY >= bakhsh.offsetTop - 15){
+      menu.forEach((links)=>{
+        links.classList.remove("menu-bar-a-hover");
+      });
+    }
+    menu[shomarande].classList.add("menu-bar-a-hover")
+
+  })
+}
+
+const scrollNavbar= ()=>{
+
+}
 
 const Header_scrolling= ()=>{
   if(window.scrollY >= Offset_headerSection){
     menu[0].classList.add('menubar-a-hover');
-    menuSpan.style.display="block";
+    spans[0].classList.add("menu-bar-a-span");
 
-  }else if(window.scrollY <= Offset_headerSection){
-    menu[0].classList.remove('menubar-a-hover')
-    menuSpan.style.display="none"
+  }else if(window.scrollY < Offset_headerSection) {
+    menu[0].classList.remove("menubar-a-hover")
+    spans[0].classList.remove("menu-bar-a-span");
+    spans[0].classList.add("menu-bar-a-span-off");
   }
 }
 
 
 const about_me_scrolling= ()=>{
-  if(window.scrollY >= Offset_about_me){
+  if(window.scrollY >= Offset_about_me ){
     menu[1].classList.add('menubar-a-hover');
-    menuSpan.style.display="block"
+    spans[1].classList.add("menu-bar-a-span");
 
-  }else if(window.scrollY <= Offset_about_me){
-    menu[1].classList.remove('menubar-a-hover')
-    menuSpan.style.display="none"
+  }else if(window.scrollY <= about_me.offsetTop){
+    menu[1].classList.remove("menubar-a-hover")
+    spans[1].classList.add("menu-bar-a-span-off");
+    spans[1].classList.remove("menu-bar-a-span");
+
   }
 }
 
@@ -72,11 +98,13 @@ const about_me_scrolling= ()=>{
 const skills_scrolling= ()=>{
   if(window.scrollY >= Offset_skills){
     menu[2].classList.add('menubar-a-hover');
-    menuSpan.style.display="block"
+    spans[2].classList.add("menu-bar-a-span");
 
-  }else if(window.scrollY <= Offset_skills){
+  }else {
     menu[2].classList.remove('menubar-a-hover')
-    menuSpan.style.display="none"
+    spans[2].classList.add("menu-bar-a-span-off");
+    spans[2].classList.remove("menu-bar-a-span");
+
   }
 }
 
@@ -84,21 +112,25 @@ const skills_scrolling= ()=>{
 const projects_scrolling= ()=>{
   if(window.scrollY >= Offset_projects){
     menu[3].classList.add('menubar-a-hover');
-    menuSpan.style.display="block"
+    spans[3].classList.add("menu-bar-a-span");
 
-  }else if(window.scrollY <= Offset_projects){
+  }else{
     menu[3].classList.remove('menubar-a-hover')
-    menuSpan.style.display="none"
+    spans[3].classList.add("menu-bar-a-span-off");
+    spans[3].classList.remove("menu-bar-a-span");
+
   }
 }
 
 const contact_me_scrolling= ()=>{
   if(window.scrollY >= Offset_contact_me){
     menu[4].classList.add('menubar-a-hover');
-    menuSpan.style.display="block"
+    spans[4].classList.add("menu-bar-a-span");
 
-  }else if(window.scrollY <= Offset_contact_me){
+  }else{
     menu[4].classList.remove('menubar-a-hover')
-    menuSpan.style.display="none"
+    spans[4].classList.add("menu-bar-a-span-off");
+    spans[4].classList.remove("menu-bar-a-span");
+
   }
 }
