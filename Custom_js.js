@@ -43,8 +43,29 @@ mybutton.addEventListener('click',()=>{
 })
 
 window.addEventListener('load',()=>{
-  menu[0].classList.add('menubar-a-hover');
-  spans[0].classList.add("menu-bar-a-span");
+  if(window.scrollY === 0){
+    menu[0].classList.add('menubar-a-hover');
+    spans[0].classList.add("menu-bar-a-span");
+  }
+
+  if(window.scrollY  >= Offset_projects && window.scrollY < Offset_contact_me ){
+    menu[3].classList.add('menubar-a-hover');
+    spans[3].classList.add("menu-bar-a-span");
+  }
+
+  if(window.scrollY >= Offset_about_me  && window.scrollY < Offset_skills ){
+    menu[1].classList.add('menubar-a-hover');
+    spans[1].classList.add("menu-bar-a-span");
+    console.log('didi shod')
+  }
+
+  if(window.scrollY >= Offset_skills && window.scrollY < Offset_projects ){
+    menu[2].classList.add('menubar-a-hover');
+    spans[2].classList.add("menu-bar-a-span");
+
+  }
+
+
 })
 window.addEventListener('scroll',()=>{
   Header_scrolling();
@@ -82,8 +103,6 @@ const about_me_scrolling= ()=>{
   if(window.scrollY >= Offset_about_me  && window.scrollY < Offset_skills ){
     menu[1].classList.add('menubar-a-hover');
     spans[1].classList.add("menu-bar-a-span");
-    console.log('didi shod')
-
   }else{
     menu[1].classList.remove("menubar-a-hover")
     spans[1].classList.add("menu-bar-a-span-off");
@@ -121,11 +140,11 @@ const projects_scrolling= ()=>{
 }
 
 const contact_me_scrolling= ()=>{
-  if(window.scrollY >= Offset_contact_me ){
+  if(window.scrollY >= Offset_contact_me + 10 ){
     menu[4].classList.add('menubar-a-hover');
     spans[4].classList.add("menu-bar-a-span");
 
-  }else{
+  }else if(window.scrollY <= Offset_contact_me){
     menu[4].classList.remove('menubar-a-hover')
     spans[4].classList.add("menu-bar-a-span-off");
     spans[4].classList.remove("menu-bar-a-span");
