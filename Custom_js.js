@@ -62,9 +62,12 @@ window.addEventListener('load',()=>{
   if(window.scrollY >= Offset_skills && window.scrollY < Offset_projects ){
     menu[2].classList.add('menubar-a-hover');
     spans[2].classList.add("menu-bar-a-span");
-
   }
 
+  if(window.scrollY >= Offset_contact_me + 10){
+    menu[4].classList.add('menubar-a-hover');
+    spans[4].classList.add("menu-bar-a-span");
+  }
 
 })
 window.addEventListener('scroll',()=>{
@@ -88,7 +91,7 @@ const scrollNavbar= ()=>{
 }
 
 const Header_scrolling= ()=>{
-  if(window.scrollY > Offset_headerSection && window.scrollY < Offset_about_me){
+  if(window.scrollY > Offset_headerSection && window.scrollY <= Offset_about_me + 20){
     menu[0].classList.add('menubar-a-hover');
     spans[0].classList.add("menu-bar-a-span");
   }else {
@@ -140,7 +143,7 @@ const projects_scrolling= ()=>{
 }
 
 const contact_me_scrolling= ()=>{
-  if(window.scrollY >= Offset_contact_me + 10 ){
+  if(window.scrollY >= Offset_contact_me + 10){
     menu[4].classList.add('menubar-a-hover');
     spans[4].classList.add("menu-bar-a-span");
 
