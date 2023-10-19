@@ -21,6 +21,8 @@ const Offset_projects = projects.offsetTop;
 const contact_me = document.querySelector('.contact-me');
 const Offset_contact_me = contact_me.offsetTop;
 
+const testi = document.querySelector('.contact-me');
+const Offset_testi = contact_me.offsetTop;
 
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -40,53 +42,49 @@ mybutton.addEventListener('click',()=>{
   document.documentElement.scrollTop = 0;
 })
 
+window.addEventListener('load',()=>{
+  menu[0].classList.add('menubar-a-hover');
+  spans[0].classList.add("menu-bar-a-span");
+})
 window.addEventListener('scroll',()=>{
   Header_scrolling();
   projects_scrolling();
   skills_scrolling();
   about_me_scrolling();
   contact_me_scrolling();
-
-  // scrollBehaviorOnSideMenubar();
+  if(window.scrollY === 0){
+    menu[0].classList.add('menubar-a-hover');
+    spans[0].classList.add("menu-bar-a-span");
+  }
 
 })
 
 
-const scrollBehaviorOnSideMenubar=()=>{
-  sections.forEach((bakhsh,shomarande)=>{
-    if(window.scrollY >= bakhsh.offsetTop - 15){
-      menu.forEach((links)=>{
-        links.classList.remove("menu-bar-a-hover");
-      });
-    }
-    menu[shomarande].classList.add("menu-bar-a-hover")
 
-  })
-}
 
 const scrollNavbar= ()=>{
 
 }
 
 const Header_scrolling= ()=>{
-  if(window.scrollY >= Offset_headerSection){
+  if(window.scrollY > Offset_headerSection && window.scrollY < Offset_about_me){
     menu[0].classList.add('menubar-a-hover');
     spans[0].classList.add("menu-bar-a-span");
-
-  }else if(window.scrollY < Offset_headerSection) {
+  }else {
     menu[0].classList.remove("menubar-a-hover")
     spans[0].classList.remove("menu-bar-a-span");
     spans[0].classList.add("menu-bar-a-span-off");
   }
 }
-
+const scrollingY = window.scrollY;
 
 const about_me_scrolling= ()=>{
-  if(window.scrollY >= Offset_about_me ){
+  if(window.scrollY >= Offset_about_me  && window.scrollY < Offset_skills ){
     menu[1].classList.add('menubar-a-hover');
     spans[1].classList.add("menu-bar-a-span");
+    console.log('didi shod')
 
-  }else if(window.scrollY <= about_me.offsetTop){
+  }else{
     menu[1].classList.remove("menubar-a-hover")
     spans[1].classList.add("menu-bar-a-span-off");
     spans[1].classList.remove("menu-bar-a-span");
@@ -96,7 +94,7 @@ const about_me_scrolling= ()=>{
 
 
 const skills_scrolling= ()=>{
-  if(window.scrollY >= Offset_skills){
+  if(window.scrollY >= Offset_skills && window.scrollY < Offset_projects ){
     menu[2].classList.add('menubar-a-hover');
     spans[2].classList.add("menu-bar-a-span");
 
@@ -110,7 +108,7 @@ const skills_scrolling= ()=>{
 
 
 const projects_scrolling= ()=>{
-  if(window.scrollY >= Offset_projects){
+  if(window.scrollY  >= Offset_projects && window.scrollY < Offset_contact_me ){
     menu[3].classList.add('menubar-a-hover');
     spans[3].classList.add("menu-bar-a-span");
 
@@ -123,7 +121,7 @@ const projects_scrolling= ()=>{
 }
 
 const contact_me_scrolling= ()=>{
-  if(window.scrollY >= Offset_contact_me){
+  if(window.scrollY >= Offset_contact_me ){
     menu[4].classList.add('menubar-a-hover');
     spans[4].classList.add("menu-bar-a-span");
 
