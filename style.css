@@ -580,7 +580,7 @@ input[type='submit']{
     border-radius: 10px;
     transition: all .25s ease-in-out;
     border: none;
-    animation: developer 2.4s .2s infinite alternate-reverse;
+    animation: developer 5.4s .2s infinite alternate-reverse;
     text-shadow: 2px 2px 5px #000;
 }
 .developer:hover{
@@ -615,11 +615,10 @@ input[type='submit']{
 
 @keyframes developer {
     0%{
-        box-shadow: 3px 3px 12px #000;
+        box-shadow: 3px 3px 12px #016b54;
     }
-
     100%{
-        box-shadow: -1px -1px 12px #000;
+        box-shadow: -1px -1px 12px #000 ;
     }
 }
 
