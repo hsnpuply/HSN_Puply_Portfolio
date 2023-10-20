@@ -154,3 +154,52 @@ const contact_me_scrolling= ()=>{
 
   }
 }
+
+
+// Show throughout scrolling
+
+const observerz = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    console.log(entry);
+    if(entry.isIntersecting){
+      entry.target.classList.add('show-right');
+    }
+  })
+})
+
+const observerx = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    console.log(entry);
+    if(entry.isIntersecting){
+      entry.target.classList.add('show-left');
+    }
+  })
+})
+
+const observery = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    console.log(entry);
+    if(entry.isIntersecting){
+      entry.target.classList.add('show-top');
+    }
+  })
+})
+
+
+const hiddenelementsOnRight = document.querySelectorAll('.hidden-right');
+hiddenelementsOnRight.forEach((element) =>{
+  observerz.observe(element);
+});
+
+
+const hiddenelementsOnLeft = document.querySelectorAll('.hidden-left');
+hiddenelementsOnLeft.forEach((element) =>{
+  observerx.observe(element);
+});
+
+
+const hiddenelementsOnTop = document.querySelectorAll('.hidden-top');
+hiddenelementsOnTop.forEach((element) =>{
+  observery.observe(element);
+});
+

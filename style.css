@@ -4,7 +4,9 @@
     font-family: 'b-nazanin';
     src: url(fonts/B-NAZANIN.TTF);
 }
+*{
 
+}
   body{
     font-family: 'Cinzel', serif;
     font-family: 'Lilita One', sans-serif;
@@ -19,6 +21,45 @@
   .social-badge{
     font-family: 'Russo One', sans-serif !important;
   }
+
+  .hidden-left{
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateX(-100%);
+    transition:all 2.4s;
+  }
+
+  .show-left{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+
+  .hidden-right{
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateX(100%) ;
+    transition:all 2.4s;
+  }
+
+  .show-right{
+    opacity: 1;
+    transform: translateX(0) ;
+    filter: blur(0);
+  }
+
+  .hidden-top{
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-100%) ;
+    transition:transform 2.3s;
+  }
+  .show-top{
+      opacity: 1;
+      transform: translateY(0%) rotate(360deg) ;
+      filter: blur(0px);
+  }
+
 
 /* /General */
 
@@ -610,8 +651,8 @@ input[type='submit']{
 .hasan_puply-:hover{
     box-shadow: 2px 2px 10px #000;
     text-shadow: 2px 2px 20px #008468;
-
 }
+
 
 @keyframes developer {
     0%{
